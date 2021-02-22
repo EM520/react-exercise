@@ -5,13 +5,15 @@ export default function ColorList(props){
     // const globalState = useContext (store)
     // const {dispatch} = globalState
     return (
-        <ul>
+        <ul className='colorList'>
             {props.colors.map((item)=>{
                 console.log(item)
                 return(
-                    <li key={item.id} id='colorList'>
-                        {item.colorCode}
+                    <div  style={{backgroundColor:item.colorCode}}>
+                    <li className='colorBox' key={item.id} >
+                        {/* {item.colorCode} */}
                     </li>
+                    </div>
                 )})}
         </ul>      
     )

@@ -4,7 +4,7 @@ import ColorList from './ColorList'
 
 
 export default function FormColors(){
-    const globalState = useState(store)
+    const globalState = useContext(store)
     const [text,setText] = useState('')
     const colors = globalState.state.colors
     const {dispatch} = globalState
@@ -15,7 +15,7 @@ export default function FormColors(){
         setText('')
     }
     return(
-        <div>
+        <div className='palette'>
             <header>Color Palette</header>
             <div className="colorBox">
                 <form onSubmit={handleSubmit} action=''> 
